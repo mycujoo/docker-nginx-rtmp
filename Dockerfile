@@ -2,7 +2,7 @@ ARG NGINX_VERSION=1.16.0
 
 ##############################
 # Build the NGINX-build image.
-FROM alpine:3.8 as build-nginx
+FROM alpine:3.10 as build-nginx
 ARG NGINX_VERSION
 
 # Build dependencies.
@@ -51,7 +51,7 @@ RUN cd /tmp/nginx-${NGINX_VERSION} && \
 
 ##########################
 # Build the release image.
-FROM alpine:3.8
+FROM alpine:3.10
 LABEL MAINTAINER Alfred Gutierrez <alf.g.jr@gmail.com>
 
 RUN apk add --update \
