@@ -56,6 +56,7 @@ LABEL MAINTAINER Alfred Gutierrez <alf.g.jr@gmail.com>
 
 RUN apk add --update \
   ca-certificates \
+  ffmpeg \
   openssl \
   pcre \
   lame \
